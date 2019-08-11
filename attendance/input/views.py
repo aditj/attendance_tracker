@@ -32,7 +32,7 @@ def view(request):
 @csrf_exempt
 def webhook(request):
   if request.method == 'POST':
-    repo = git.Repo('/home/aditjain/attendancet_tracker')
+    repo = git.Repo('/home/kalashdit/attendance_tracker')
     repo.git.reset('--hard')
     repo.git.clean('-fdx')
 
