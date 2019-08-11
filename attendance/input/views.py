@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect,HttpResponse,csrf_exempt
 from .models import Attendance
 
 # Create your views here.
