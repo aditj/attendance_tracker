@@ -24,6 +24,8 @@ def view(request):
                 attended+=1
         if total!=0:
             percentage=(attended/total)*100
+        else:
+            percentage="NA"
         return render(request,"input/index.html",context={"classes":classes,"percentage":percentage})
     else:
         return render(request,"input/index.html")
