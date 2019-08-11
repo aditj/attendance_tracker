@@ -21,6 +21,7 @@ def view(request):
         return render(request,"input/index.html",context={"classes":classes,"percentage":percentage})
     else:
         return render(request,"input/index.html")
+@csrf_exempt
 def webhook(request):
   if request.method == 'POST':
     repo = git.Repo('/home/aditjain/attendancet_tracker')
