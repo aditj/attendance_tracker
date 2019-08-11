@@ -5,8 +5,38 @@
     <title></title>
   </head>
   <body>
-    <form class="" action="/add_attendance" method="post">
+    <form class="" action="/view" method="post">
+      {% csrf_token %}
+      <select class="" name="sub">
+        <option value="MPA">MPA</option>
+<option value="HRM">HRM</option>
+<option value="IT">IT</option>
+<option value="ECO">ECO</option>
+<option value="ECOMM">ECOMM</option>
+<option value="HRMTUT">HRMTUT</option>
+<option value="ECO TUT">ECO TUT</option>
+<option value="IT TUT">IT TUT</option>
+<option value="MPA TUT">MPA TUT</option>
 
+        <input type="month" name="month" value="2019-08">
+      <button type="submit" name="button">Submit</button>
+      </select>
     </form>
+
+    <table>
+      <thead>
+        <th>Date</th>
+        <th>Attended</th>
+      </thead>
+
+      <tbody>
+              {% for class in classes %}
+                <tr>
+                  <td>{{ class.date }}</td>
+                  <td> {{ class.status }}</td>
+                </tr>
+              {% endfor %}
+      </tbody>
+    </table>
   </body>
 </html>

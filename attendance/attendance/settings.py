@@ -25,7 +25,7 @@ SECRET_KEY = '+_1x^@de-hb-cioqhn19$2x-4xu21c-q$-jdl7hs^-rn9---(5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kalashdit.pythonanywhere.com']
+ALLOWED_HOSTS = ['kalashdit.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
