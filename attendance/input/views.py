@@ -11,8 +11,10 @@ def view(request):
     if request.method=="POST":
         classes=[]
         classes_a= Attendance.objects.filter(subs=request.POST.get("sub"))
+
         for class_a in classes_a:
-            if class_a.date.month()==request.POST.get("month"):
+
+            if class_a.date.strftime("%Y-%m")==request.POST.get("month"):
                 classes.append(class_a)
         total=0
         attended=0
